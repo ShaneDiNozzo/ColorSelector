@@ -1,0 +1,40 @@
+' Gambas class file
+
+Public Sub Button1_Click()
+  Dim ColorValue As String = Str(ColorChooser1.Value)
+  Dim HexColror As String = Hex(ColorValue)
+  Dim strHexColor As String
+  Dim Button1Text As String = "Copy color HEX to clipboard:"
+  
+  If Len(HexColror) = 1 Then
+    strHexColor = "00000" & Str(HexColror)
+    Button1.Text = Button1Text & " #" & strHexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & strHexColor)
+  Else If Len(HexColror) = 2 Then
+    strHexColor = "0000" & Str(HexColror)
+    Button1.Text = Button1Text & " #" & strHexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & strHexColor)
+  Else If Len(HexColror) = 3 Then
+    strHexColor = "000" & Str(HexColror)
+    Button1.Text = Button1Text & " #" & strHexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & strHexColor)
+  Else If Len(HexColror) = 4 Then
+    strHexColor = "00" & Str(HexColror)
+    Button1.Text = Button1Text & " #" & strHexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & strHexColor)
+  Else If Len(HexColror) = 5 Then
+    strHexColor = "0" & Str(HexColror)
+    Button1.Text = Button1Text & " #" & strHexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & strHexColor)
+  Else
+    Button1.Text = Button1Text & " #" & HexColor
+    Panel1.Background = ColorValue
+    Clipboard.Copy("#" & HexColor)
+  Endif
+
+End

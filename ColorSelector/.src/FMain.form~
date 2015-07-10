@@ -1,0 +1,15 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,50,51)
+  { ColorChooser1 ColorChooser
+    MoveScaled(0,0,50,43)
+  }
+  { Button1 Button
+    MoveScaled(6,44,38,4)
+    Text = ("Copy color HEX")
+  }
+  { Panel1 Panel
+    MoveScaled(2,49,46,1)
+  }
+}
